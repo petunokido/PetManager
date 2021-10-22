@@ -22,7 +22,7 @@
 
 
 ### *Exceptions:*
-* Player Not Found
+
 
 ### *SpringBoot API workshop with MongoDB and Docker Exercise*
 
