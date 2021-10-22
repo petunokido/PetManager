@@ -5,7 +5,6 @@
 
 ### *Models*:
 
-This API has 3 repositories, that extend the MongoDB repository apllied for our 3 main classes.
 
 ### *Repositories*
 
