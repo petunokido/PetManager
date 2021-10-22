@@ -24,7 +24,7 @@
 ### *Exceptions:*
 * Player Not Found
 
-###*SpringBoot API workshop with MongoDB and Docker Exercise*
+### *SpringBoot API workshop with MongoDB and Docker Exercise*
 
 *In order to put api running you need to install docker https://docs.docker.com/get-docker/
 
