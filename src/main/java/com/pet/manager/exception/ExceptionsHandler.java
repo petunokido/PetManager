@@ -30,4 +30,14 @@ public class ExceptionsHandler {
                 LocalDateTime.now()
         );
     }
+
+    @ExceptionHandler({PetConflict.class})
+    @ResponseStatus(HttpStatus.CONFLICT)
+    public HttpErrorResponse handleServiceNotAvailable(PetConflict exception) {
+        return new HttpErrorResponse(
+                409,
+                exception.getMessage(),
+                LocalDateTime.now()
+        );
+    }
 }

@@ -1,6 +1,5 @@
 package com.pet.manager.repository;
 
-import com.pet.manager.model.Author;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

@@ -70,7 +70,7 @@ public class PetController {
         //Missing 409 Conflict Exception
     }
 
-    @DeleteMapping(value="/deletepet/{id}")
+    @DeleteMapping(value="/delete-pet/{id}")
 
     public void deletePet (@PathVariable(value = "id") String id)
     {

@@ -1,8 +1,7 @@
 package com.pet.manager.service;
 
 import com.pet.manager.controller.request.PetRequest;
-import com.pet.manager.controller.response.PetResponse;
-import com.pet.manager.exception.DuplicatePetException;
+import com.pet.manager.exception.PetConflict;
 import com.pet.manager.exception.PetNotFound;
 import com.pet.manager.model.Pet;
 import com.pet.manager.repository.PetRepository;
@@ -12,13 +11,14 @@ import org.springframework.stereotype.Service;
 public class PetService {
 
     private final PetRepository petRepository;
+
     public PetService(PetRepository petRepository) {
         this.petRepository = petRepository;
     }
 
 
     public Pet findById(String id) {
-        return petRepository.findById(id).orElseThrow(PetNotFound::new);
+        return petRepository.findById(id).orElseThrow(PetConflict::new);
     }
 
     public Pet save(Pet createPet) {
@@ -42,7 +42,8 @@ public class PetService {
     }
 
     public Pet findByName(String name) {
-        return petRepository.getPetByName(name).orElseThrow(DuplicatePetException::new);
-        //Missing 404 Conflict Exception
+        return (Pet) petRepository.getPetByName(name).orElseThrow(PetNotFound::new);
+
     }
+
 }
